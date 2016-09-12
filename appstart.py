@@ -5,9 +5,13 @@ import re
 import variables
 import execute
 import sys
+import subprocess
+import time
 
 ### parses API response for client count ###
 def getCount():
+
+
 
     global numlist
 
@@ -34,16 +38,19 @@ def magic(numlist):
 ### checks user input "threshold" against client count integer ###
 def compare():
 
-    if count >= variables.threshold:
-        print "There are currently",count,"customers in this department. We are sending an alert to the Manager."
-        execute.runApp()
-    else:
-        print "There are currently",count,"customers. The floor is operating smoothly."
-        sys.exit()
+    while True:
+        subprocess.call("./CMXRequest.sh", shell=True)
+        getCount()
+        magic(numlist)
 
+        if count >= variables.threshold:
+            print "There are currently",count,"customers in this department. We are sending an alert to the Manager."
+            execute.runApp()
+            time.sleep(300)
+        else:
+            print "There are currently",count,"customers. The floor is operating smoothly."
+            time.sleep(300)
 
-getCount()
-magic(numlist)
 compare()
 
 

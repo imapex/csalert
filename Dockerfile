@@ -2,12 +2,21 @@
 ## Python Dockerfile
 ##
 
-FROM python:2-alpine
+FROM ubuntu:16.04
 MAINTAINER Bryan Adams "bmadams0@gmail.com"
-EXPOSE 80
+EXPOSE 8005
 
-## RUN
+RUN apt-get update && apt-get install -y curl python-pip
+RUN pip install requests
 
-CMD ["python"]
+## Try to shorten copy, variables and single-line
+COPY CMXRequest.sh ./
+COPY execute.py ./
+COPY sparkMember.py ./
+COPY sparkMessage.py ./
+COPY sparkRoom.py ./
+COPY variables.py ./
+COPY appstart.py ./
 
-## Add in csalert.py to CMD line
+ENTRYPOINT ["python"]
+CMD ["appstart.py"]

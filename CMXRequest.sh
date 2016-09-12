@@ -6,5 +6,6 @@ VAR=$(curl -s -X GET -H "Authorization: Basic bGVhcm5pbmc6bGVhcm5pbmc=" "https:/
 
 echo $VAR > CMXResponse.txt
 
-#kicks off python scripts
-python CMX.py
+#python appstart.py
+
+
