@@ -5,7 +5,7 @@
                 <h1>CS-Alert (CMX-Spark Alert)</h1>
             </p>
             <p>
-                This is an application designed to take input from CMX and send triggered alerts to Spark.<br></br>
+                This is an application designed to take input from CMX and sends triggered alerts to Spark.<br></br>
             </p>
             <p>
                 <b>The Challenge</b> - We need the ability to use the location analytics provided by CMX to analyze retail floor congestion and automatically alert
