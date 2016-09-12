@@ -4,6 +4,6 @@
 
 #### Gather user token & email ####
 
-token = 'NTJiMTQyZjUtZTZlZC00N2I1LThjNTgtYWNmMjgyMDJhZmMyYzExYzY3YjQtNTdl' #raw_input('Enter your Spark Token: ')
+token =raw_input('Enter your Spark Token: ') #'NTJiMTQyZjUtZTZlZC00N2I1LThjNTgtYWNmMjgyMDJhZmMyYzExYzY3YjQtNTdl'
 email = raw_input("Enter the Floor Manager's email: ")
 threshold = input("What is the department's customer capacity?\n")
