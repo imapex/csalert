@@ -151,7 +151,7 @@
                 </li>
                 <ul type="circle">
                     <li>
-                        Sends a message to the Spark room.
+                        Sends a message to the Spark room. 
                     </li>
                 </ul>
             </ul>
